@@ -1,0 +1,146 @@
+{
+	"simset" : {
+		"@endDate" : "16-12-2017"
+	},
+	"common" : {
+		"CO2dosing" : {
+			"@capacity" : 150
+		}
+	},
+	"comp1" : {
+		"setpoints" : {
+			"temp" : {
+				"@heatingTemp" : {
+					"01-02" : {
+						"r" : 17,
+						"r+2" : 19,
+						"12" : 19,
+						"13" : 20,
+						"s-2" : 20,
+						"s+1" : 16,
+						"22" : 16,
+						"23" : 17
+					}
+				},
+				"@ventOffset" : {
+					"01-01" : {
+						"s-2" : 2,
+						"s+1" : 1,
+						"22.0" : 1,
+						"23.0" : 2
+					}
+				},
+				"@radiationInfluence" : {
+					"01-01" : "100 400 2"
+				},
+				"@PbandVent" : "6 18; 20 4"
+			},
+			"ventilation" : {
+				"@startWnd" : 30,
+				"@winLeeMin" : 0,
+				"@winLeeMax" : 100,
+				"@winWndMin" : 0,
+				"@winWndMax" : 100
+			},
+			"CO2" : {
+				"@setpoint" : {
+					"01-01" : {
+						"r+0.5" : 400,
+						"r+1" : 800,
+						"s-1.5" : 800,
+						"s" : 400
+					}
+				},
+				"@setpIfLamps" : 700,
+				"@doseCapacity" : {
+					"01-10" : 100,
+					"01-03" : "20 100; 40 50; 70 25"
+				}
+			}
+		},
+		"heatingpipes" : {
+			"pipe1" : {
+				"@maxTemp" : {
+					"15-12" : {
+						"r-1" : 60,
+						"r+1" : 80,
+						"r+2" : 80,
+						"r+3" : 60
+					},
+					"01-04" : {
+						"0" : 70
+					}
+				},
+				"@minTemp" : {
+					"15-12" : {
+						"r-1" : 45,
+						"r+1" : 35,
+						"s+2" : 35,
+						"s+3" : 45
+					},
+					"15-04" : {
+						"0" : 0
+					}
+				},
+				"@radiationInfluence" : "100  400"
+			}
+		},
+		"screens" : {
+			"scr1" : {
+				"@enabled" : true,
+				"@closeBelow" : 5,
+				"@closeAbove" : 1200,
+				"@lightPollutionPrevention" : true
+			},
+			"scr2" : {
+				"@enabled" : true,
+				"@closeBelow" : "0 290; 10 2",
+				"@closeAbove" : 1200,
+				"@lightPollutionPrevention" : false
+			}
+		},
+		"illumination" : {
+			"lmp1" : {
+				"@enabled" : {
+					"01-10" : true,
+					"20-04" : false
+				},
+				"@intensity" : 200,
+				"@hoursLight" : {
+					"01-10" : 18,
+					"15-02" : 16,
+					"15-03" : 15
+				},
+				"@endTime" : 20,
+				"@maxIglob" : 150,
+				"@maxPARsum" : 18
+			}
+		},
+		"irrigation" : {
+			"@shotSize" : {
+				"01-12" : 150,
+				"20-12" : 200,
+				"30-12" : 250,
+				"15-01" : 300,
+				"20-01" : 350
+			},
+			"@molesPerShot" : 1.8,
+			"@maxPauseTime" : 2,
+			"@EC" : 2.5
+		}
+	},
+	"crp_tomato" : {
+		"Intkam" : {
+			"management" : {
+				"@stemDensity" : "1 1.5; 20 2.25; 50 3",
+				"@leafPickingStrategy" : "1 0; 25 0.33; 80 0.16",
+				"@dayTopping" : 200
+			},
+			"tomato" : {
+				"growth" : {
+					"@FruitsNrPerTruss" : "1 5; 70 10"
+				}
+			}
+		}
+	}
+}
